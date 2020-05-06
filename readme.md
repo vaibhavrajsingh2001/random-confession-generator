@@ -1,6 +1,7 @@
-# Random fake stuff generator using fake Indian names.
+# Random stuff generatoR.
 
-*The main aim of this script is to just act as a skeleton for generating random stuff and posting them in places like google forms.*
+*The main aim of this script is to just act as a skeleton for generating random stuff and posting them in places like google forms which
+aim to spam individuals.*
 
 Some of my friends were troubled by some confession pages of our institute, so made this random confessions generator that bombarded the google forms of those pages.
 
