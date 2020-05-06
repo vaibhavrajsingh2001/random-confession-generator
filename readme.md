@@ -5,13 +5,13 @@ aim to spam individuals.*
 
 Some of my friends were troubled by some confession pages of our institute, so made this random confessions generator that bombarded the google forms of those pages.
 
-However, due to flexible nature of puppeteer, you can basically create random stuff and bombard any form with any fake stuff and fake names. Just use a different page to scrape stuff off. I used a romantic quotes page, cause that's what I needed for my nefarious purposes. But you could basically use anything since this a well written skeleton structure for doing fun things with puppeteer.
+However, due to flexible nature of puppeteer, you can basically create random stuff and bombard any form with any generated stuff. Just use a different page to scrape stuff off. I used a romantic quotes page, cause that's what I needed for my purposes. But you could basically use anything since this a well written skeleton structure for doing fun things with puppeteer.
 
 ## Usage
 
 Run:
 
-```javascript
+```
 npm install
 npm run start
 ```
