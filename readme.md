@@ -7,9 +7,17 @@ Some of my friends were troubled by some confession pages of our institute, so m
 
 However, due to flexible nature of puppeteer, you can basically create random stuff and bombard any form with any generated stuff. Just use a different page to scrape stuff off. I used a romantic quotes page, cause that's what I needed for my purposes. But you could basically use anything since this a well written skeleton structure for doing fun things with puppeteer.
 
-## Usage
+## Usage:
 
-Run:
+Install from NPM:
+
+```
+npm i random-confession-generator
+```
+
+**OR**
+
+Clone this repo & Run:
 
 ```
 npm install
