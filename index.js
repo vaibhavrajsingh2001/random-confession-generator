@@ -1,27 +1,25 @@
 const puppeteer = require('puppeteer');
 const random_name = require('random-indian-name');
-const url = "https://docs.google.com/forms/d/e/1FAIpQLSeXO9S5Gm__AodYYZsDoLLMHwR24_bVwsvti4C7v2f8mRif_Q/viewform";
-const entry = "entry.2010684884";
 
-(async () => {
+module.exports = async function confess (url, entry, count) {
     let quotes = [];
     let names = [];
     const browser = await puppeteer.launch();
+    console.log("Puppeteer has been launched");
     const page = await browser.newPage();
-    for (let index = 1; index < 21; index++) {
+    console.log("Scraping quotes...");
+    for (let index = 1; index <= Math.ceil(count/20) ; index++) {
         await page.goto(`https://www.successories.com/iquote/category/44/love-quotes/${index}`);
         const textsArray = await page.evaluate(
             () => [...document.querySelectorAll('.quote')].map(elem => elem.innerText)
         );
-        await quotes.push(...textsArray);
+        quotes.push(...textsArray);
     }
 
-    for (let i = 0; i < 400; i++) {
-        names.push(random_name({random: Math.random}));
-    }
-    // console.log(names);
+    quotes.forEach(() => names.push(random_name({random: Math.random})));
 
-    for(let i = 0; i < 400; i++) {
+    console.log("Pushing confessions now!");
+    for(let i = 0; i < count ; i++) {
         const message = `For ${names[i]}: ${quotes[i]}`;
         const newPage = await browser.newPage();
         await newPage.goto(`${url}?${entry}=${message}`);
@@ -30,5 +28,6 @@ const entry = "entry.2010684884";
         console.log(message);
         newPage.close();
     }
+    process.exit();
     // ...
-})();
+};

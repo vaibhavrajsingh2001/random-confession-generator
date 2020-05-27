@@ -1,16 +1,16 @@
 {
   "name": "random-confession-generator",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaibhavrajsingh2001/random-confession-generator.git"
+  },
   "description": "Genrerates fake confessions",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "author": "VRS",
+  "author": "Vaibhav Raj Singh <https://github.com/vaibhavrajsingh2001>",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^3.0.1",
-    "random-indian-name": "^1.0.0"
+    "puppeteer": "3.0.1",
+    "random-indian-name": "1.0.0"
   }
 }
